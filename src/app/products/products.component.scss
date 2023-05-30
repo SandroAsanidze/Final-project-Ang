@@ -16,3 +16,28 @@
 img {
     width: 200px;
 }
+.delete-btn {
+    font-size: 20px;
+    color: red;
+    border: 1px solid red;
+}
+.addbtn {
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.addbtn-form {
+    width: 70%;
+    margin: 0 auto;
+}
+.form-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(20, 33, 75);
+    margin-top: 40px;
+}
