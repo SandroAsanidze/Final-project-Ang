@@ -1,0 +1,49 @@
+<div class="review-div">
+    <h2>Registration Field</h2>
+    <form class="form" [formGroup]="reactiveForm" (ngSubmit)="Submit()">
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" formControlName = "firstname"/>
+              <label class="form-label" for="form3Example1">First name</label>
+              <div class="text-danger" *ngIf="reactiveForm.controls['firstname'].invalid && (reactiveForm.controls['firstname'].dirty || reactiveForm.controls['firstname'].touched)">
+                *This field is required
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" formControlName = "lastname" />
+              <label class="form-label" for="form3Example2">Last name</label>
+              <div class="text-danger" *ngIf="reactiveForm.controls['lastname'].invalid && (reactiveForm.controls['lastname'].dirty || reactiveForm.controls['lastname'].touched)">
+                *This field is required
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control" formControlName = "email" placeholder="Email@gmail.com"/>
+          <label class="form-label" for="form3Example3">Email</label>
+          <div class="text-danger" *ngIf="reactiveForm.controls['email'].invalid && (reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)">
+            <div *ngIf="reactiveForm.controls['email'].errors">
+                <div class="text-danger" *ngIf="reactiveForm.controls['email'].errors['required']" >*This field is required</div>
+                <div class="text-danger" *ngIf="reactiveForm.controls['email'].errors['email']" >*InCorrect Email</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control" formControlName="password" placeholder="*******" />
+          <label class="form-label" for="form3Example4">Password</label>
+          <div class="text-danger" *ngIf="reactiveForm.controls['password'].invalid && (reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched)">
+            <div *ngIf="reactiveForm.controls['password'].errors">
+                <div class="text-danger" *ngIf="reactiveForm.controls['password'].errors['required']" >*This field is required</div>
+                <div class="text-danger" *ngIf="reactiveForm.controls['password'].errors['pattern']" >*Password must be between 4 and 8 digits long.</div>
+            </div>
+        </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mb-4 button" [disabled] = "reactiveForm.invalid">Sign up</button>
+    </form>
+</div>

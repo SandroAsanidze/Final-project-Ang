@@ -1,0 +1,18 @@
+<div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand shop" href="#">{{logo}}</a>
+          <div class="collapse navbar-collapse nav justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item" *ngFor="let nav of navigation">
+                <a
+                class="nav-link"
+                [routerLink]="nav.path"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLinkActive="active">{{ nav.name }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+</div>

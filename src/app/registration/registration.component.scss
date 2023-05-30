@@ -1,0 +1,22 @@
+.review-div {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color:#1d2a3fe1;
+    .form {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        .button {
+            width: 130px;
+            margin: 0 auto;
+        }
+    }
+    color: #fff;
+}
