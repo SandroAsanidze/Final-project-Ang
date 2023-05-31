@@ -41,3 +41,13 @@ h2 {
     color: rgb(20, 33, 75);
     margin-top: 40px;
 }
+
+@media (max-width: 1050px) {
+    .form-div {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-success {
+        margin-top: 20px;
+    }
+}

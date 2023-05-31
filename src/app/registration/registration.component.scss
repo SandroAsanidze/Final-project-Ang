@@ -17,6 +17,34 @@
             width: 130px;
             margin: 0 auto;
         }
+        .first-last {
+            display: flex;
+            .col {
+                padding: 10px;
+            }
+        }
     }
     color: #fff;
+}
+
+.pass {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.pass-lab {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px){
+    .review-div {
+        width: 90%;
+    }
+    .first-last {
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        margin-top: 10px;
+    }
 }
