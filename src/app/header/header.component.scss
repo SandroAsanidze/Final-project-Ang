@@ -28,17 +28,42 @@ a {
 .burger-bar {
     display: none;
 }
+.navBar {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+}
 
 @media (max-width: 991px) {
-    .header-div-2 {
-        height: 80px;
-    }
-    .burger-bar {
+    .navBar {
         display: block;
-        font-size: 30px;
         position: absolute;
-        top: 15px;
-        right: 15px;
-        color: #fff;
+        top: 10;
+        right: 1.5rem;
+    }
+    .nav-body {
+        position: relative;
+        width: 100%;
+    }
+    .is_expanded {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #182131;
+        padding: 10px;
+    }
+    .container-fluid {
+        --bs-gutter-x: 0rem;
+    }
+    .log-out {
+        margin-left: 25px;
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
     }
 }

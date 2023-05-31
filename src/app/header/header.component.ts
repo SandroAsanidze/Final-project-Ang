@@ -8,6 +8,8 @@ import { NavMenu } from './nav.interface';
 })
 export class HeaderComponent {
   logo:string = 'Shop.';
+
+  isExpanded$: boolean = false;
   
   navigation: NavMenu[] = [
     {
@@ -23,4 +25,10 @@ export class HeaderComponent {
       name:'Registration'
     }
   ]
+
+  open() {
+    console.log("nodara");
+    
+    this.isExpanded$ = !this.isExpanded$;
+  }
 }

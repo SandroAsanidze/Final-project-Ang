@@ -1,10 +1,10 @@
 <div class="bg-color">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid ">
           <a class="navbar-brand shop" href="./main">{{logo}}</a>
-          <div class="header-div-2 navigation" id="navBar">
-            <nav class="collapse navbar-collapse nav justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav">
+          <div class="header-div-2 navigation nav-body">
+            <nav class="collapse navbar-collapse nav justify-content-end" id="navbarNavDropdown" [ngClass]="{'is_expanded': isExpanded$ === true }">
+              <ul class="navbar-nav ul">
                 <li class="nav-item" *ngFor="let nav of navigation">
                   <a
                   class="nav-link"
@@ -12,14 +12,15 @@
                   [routerLinkActiveOptions]="{exact: true}"
                   routerLinkActive="active">{{ nav.name }}</a>
                 </li>
+                <li>
+                  <a
+                  class="log-out"
+                  routerLink="/">Log Out</a>
+                </li>
               </ul>
-              <li>
-                <a
-                class="log-out"
-                routerLink="/">Log Out</a>
-              </li>
             </nav>
           </div>
+          <div class="navBar" (click)="open()">|||</div>
         </div>
     </nav>
 </div>
