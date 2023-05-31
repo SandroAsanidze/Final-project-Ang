@@ -1,3 +1,4 @@
+<app-header></app-header>
 <button (click)= "backPage()" class="btn"><span><</span></button>
 <div class="card mb-5 mt-5 m-auto" style="max-width: 1200px;" *ngIf= "productData">
     <div class="row g-0">
@@ -9,7 +10,9 @@
           <h5 class="card-title">{{productData.title}}</h5>
           <p class="card-text">{{productData.description}}</p>
           <p class="card-text"><small class="text-body-secondary">{{productData.category}}</small></p>
+          <p style="font-size: 30px">{{productData.price}}$</p>
         </div>
       </div>
     </div>
 </div>
+<app-footer></app-footer>

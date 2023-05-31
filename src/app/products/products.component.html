@@ -1,3 +1,4 @@
+<app-header></app-header>
 <h2>Products</h2>
 <hr>
 <div class="mt-3 mb-3 add-button">
@@ -55,7 +56,10 @@
           <p class="card-text">{{product.category}}</p>
           <button class="btn delete-btn" (click)= "deleteProductById(product.id)">X</button>
         </div>
-        <p>{{product.description| slice: 0 : 100}}...</p>
+        <p>{{product.description | slice: 0 : 100}}...</p>
         <a [routerLink]= "['/products', product.id]" class="link">See more</a>
     </div>
+</div>
+<div style="width: 100%; margin-top: 100px">
+  <app-footer></app-footer>
 </div>

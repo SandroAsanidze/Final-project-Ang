@@ -24,6 +24,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   Submit(){
-    this._router.navigate(['/'])
+    this._router.navigate(['/main'])
   }
 }

@@ -1,7 +1,7 @@
 <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand shop" href="#">{{logo}}</a>
+          <a class="navbar-brand shop" href="./main">{{logo}}</a>
           <div class="collapse navbar-collapse nav justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item" *ngFor="let nav of navigation">
@@ -12,6 +12,11 @@
                 routerLinkActive="active">{{ nav.name }}</a>
               </li>
             </ul>
+            <li>
+              <a
+              class="log-out"
+              routerLink="/">Log Out</a>
+            </li>
           </div>
         </div>
     </nav>

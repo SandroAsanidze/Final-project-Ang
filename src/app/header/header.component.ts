@@ -10,15 +10,15 @@ export class HeaderComponent {
   logo:string = 'Shop.';
   navigation: NavMenu[] = [
     {
-      path:'/',
-      name:'Main'
+      path:'/main',
+      name:'Home'
     },
     {
-      path:'products',
+      path:'/products',
       name:'Products'
     },
     {
-      path:'registration',
+      path:'/registration',
       name:'Registration'
     }
   ]
