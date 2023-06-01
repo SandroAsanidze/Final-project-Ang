@@ -27,8 +27,6 @@ export class HeaderComponent {
   ]
 
   open() {
-    console.log("nodara");
-    
     this.isExpanded$ = !this.isExpanded$;
   }
 }
