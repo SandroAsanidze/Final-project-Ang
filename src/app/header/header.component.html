@@ -20,7 +20,8 @@
               </ul>
             </nav>
           </div>
-          <div class="navBar" (click)="open()">|||</div>
+          <div *ngIf="!isExpanded$" class="navBar" (click)="open()"><i class="fa-solid fa-bars-staggered"></i></div>
+          <div *ngIf="isExpanded$" class="closeBar" (click)="open()"><i class="fa-solid fa-xmark"></i></div>
         </div>
     </nav>
 </div>

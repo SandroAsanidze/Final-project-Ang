@@ -32,6 +32,15 @@ a {
     display: none;
     color: #fff;
     font-size: 25px;
+    cursor: pointer;
+}
+.closeBar {
+    display: none;
+    font-size: 25px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1000;
+    color: white;
 }
 
 @media (max-width: 991px) {
@@ -41,20 +50,35 @@ a {
         top: 10;
         right: 1.5rem;
     }
+    .closeBar {
+        display: block;
+        top: 10;
+        right: 1.8rem;
+    }
     .nav-body {
         position: relative;
         width: 100%;
     }
     .is_expanded {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // background-color: #182131;
+        // padding: 10px;
+        position: fixed;
+        top: 64px;
         right: 0;
+        height: 20vh;
+        width: 160px;
+        z-index: 999;
         background-color: #182131;
-        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     .container-fluid {
         --bs-gutter-x: 0rem;
