@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { APIService } from '../core/api.service';
 import { Products } from './products.interface';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit{
   products: Products[]=[];
   newProduct:FormGroup;
   showForm: boolean = false;
-  constructor(private _productsService: APIService, private _formBuilder:FormBuilder){
+  constructor(private _productsService: APIService, private _formBuilder:FormBuilder,private _route:ActivatedRoute){
     this.newProduct = this._formBuilder.group({
       title:this._formBuilder.control('',Validators.required),
       price:this._formBuilder.control('',Validators.required),
@@ -23,9 +23,8 @@ export class ProductsComponent implements OnInit{
     })
   }
   ngOnInit(): void {
-    this._productsService.getProducts().subscribe(data =>{
-      this.products = data
-    })
+    this._productsService.getProducts().subscribe(data => this.products = data)
+    this.products = this._route.snapshot.data['productsData'];
   }
   addNewProduct(newProduct: Products) {
     this._productsService.addProduct(newProduct).subscribe(result => {
