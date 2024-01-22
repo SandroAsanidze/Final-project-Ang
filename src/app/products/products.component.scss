@@ -42,6 +42,38 @@ h2 {
     margin-top: 40px;
 }
 
+
+.pagination-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pagination {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      li {
+          margin: 0 5px;
+          a {
+              text-decoration: none;
+              background-color: #00aeff;
+              color: white;
+              padding: 5px 10px;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: background-color 0.2s;
+              &:hover {
+                  background-color: #0056b3;
+                }
+        }
+      }
+    }
+}
+.pagination-div .pagination li a.active {
+  background-color: #033c46;
+}
+
+
+
 @media (max-width: 1050px) {
     .form-div {
         display: flex;

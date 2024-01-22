@@ -72,4 +72,45 @@ export class ProductsComponent implements OnInit{
   get image(){
     return this.newProduct.get('image') as FormControl
   }
+
+  currentPage:number = 1;
+  itemsPerPage:number = 10;
+  totalItems:number = 0;
+
+  onePageData() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.products.slice(startIndex,endIndex);
+  }
+
+  previosPage() {
+    if(this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  nextPage() {
+    if(this.currentPage < this.totalItems) {
+      this.currentPage++;
+    }
+  }
+
+  get totalPages():number {
+    this.totalItems = this.products.length;
+    return Math.ceil(this.totalItems / this.itemsPerPage);
+  }
+
+  get pageNumbers(): number[] {
+    const pages = [];
+    for (let i = 1; i <= this.totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+
+
+  scrollToTop() {
+    window.scroll({top:0,left:0, behavior:'smooth'})
+  }
+
 }
