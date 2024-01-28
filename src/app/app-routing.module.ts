@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path:'products',
     resolve: { productsData: productResolver },
-    loadChildren:()=> import('./products/product-details/products/products.module').then(p => p.ProductsModule)
+    loadChildren:()=> import('./products/product-details/products/products.module').then(p => p.ProductsModule),
+    canActivate:[authGuard],
   },
   {
     path:'registration',

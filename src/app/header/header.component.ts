@@ -29,4 +29,8 @@ export class HeaderComponent {
   open() {
     this.isExpanded$ = !this.isExpanded$;
   }
+
+  logOut() {
+    localStorage.removeItem('TOKEN');
+  }
 }
